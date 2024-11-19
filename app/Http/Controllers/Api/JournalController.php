@@ -31,7 +31,14 @@ class JournalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $journal = Journal::create([
+            'entry' => $request->entry,
+            'emotion' => $request->emotion
+        ]);
+
+        $journal->save();
+
+        return response()->json($journal, 200);
     }
 
     /**
