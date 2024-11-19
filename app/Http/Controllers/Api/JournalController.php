@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Journal;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,9 @@ class JournalController extends Controller
      */
     public function index()
     {
-        //
+        $journals = Journal::all();
+
+        return response()->json($journals, 200);
     }
 
     /**
