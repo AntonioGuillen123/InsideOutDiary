@@ -79,6 +79,14 @@ class JournalController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $journal = Journal::find($id);
+
+        $journal->delete();
+
+        $message = [
+            'message' => 'The record was successfully deleted from the journal :)'
+        ];
+
+        return response()->json($message, 200);
     }
 }
