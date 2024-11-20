@@ -17,7 +17,8 @@ class JournalFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'entry' => $this->faker->realText($maxNbChars = 200),
+            'emotion' => $this->faker->imageUrl()
         ];
     }
 }
