@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\JournalController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [JournalController::class, 'index'])->name('home');
