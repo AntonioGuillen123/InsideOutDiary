@@ -44,10 +44,12 @@ class JournalController extends Controller
     /**
      * Display the specified resource.
      */
-    /* public function show(string $id)
+    public function show(string $id)
     {
-        //
-    } */
+        $journal = Journal::find($id);
+
+        return response()->json($journal, 200);
+    }
 
     /**
      * Show the form for editing the specified resource.
