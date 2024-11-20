@@ -8,3 +8,4 @@ Route::get('/journal', [JournalController::class.'index'])->name('apihome');
 Route::delete('/journal/{id}',[JournalController::class,'destroy'])->name('apidestroy');
 Route::post('/journal',[JournalController::class,'store'])->name('apistore');
 Route::put('/journal/{id}',[JournalController::class,'update'])->name('apiupdate');
+Route::get('/journal/{id}',[JournalController::class,'show'])->name('apishow');
