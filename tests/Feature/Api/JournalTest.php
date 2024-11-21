@@ -44,4 +44,37 @@ class JournalTest extends TestCase
         $response = $this->get(route('apihome'));
         $response->assertStatus(200)->assertJsonCount(1);
     }
+
+    public function test_CheckIfCanUpdateAnEntryOnJournalWithApi()
+    {
+        $this->post(route('apistore'), [
+            'entry' => 'Test Entry',
+            'emotion' => 'Test Emotion'
+        ]);
+
+        $data = [
+            'entry' => 'Test Entry'
+        ];
+
+        $response = $this->get(route('apihome'));
+        $response->assertStatus(200)
+            ->assertJsonCount(1)
+            ->assertJsonFragment($data);
+
+        $JournalID = $response->json()[0]['id'];
+
+        $this->put(route('apiupdate', $JournalID), [
+            'entry' => 'Test Entry Updated',
+            'emotion' => 'Test Emotion Updated'
+        ]);
+
+        $newData = [
+            'entry' => 'Test Entry Updated'
+        ];
+
+        $response = $this->get(route('apihome'));
+        $response->assertStatus(200)
+            ->assertJsonCount(1)
+            ->assertJsonFragment($newData);
+    }
 }
