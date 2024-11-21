@@ -20,4 +20,17 @@ class JournalTest extends TestCase
 
         $response->assertStatus(200)->assertJsonCount(2);
     }
+
+    public function test_CheckIfCanDeleteAnEntryOnJournalWithApi()
+    {
+        $journals = Journal::factory(2)->create();
+
+        $this->delete(route('apidestroy', $journals->first()->id));
+
+        $this->assertDatabaseCount('journal', 1);
+
+        $response = $this->get(route('apihome'));
+
+        $response->assertStatus(200)->assertJsonCount(1);
+    }
 }
