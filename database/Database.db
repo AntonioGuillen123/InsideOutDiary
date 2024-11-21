@@ -6,7 +6,59 @@ USE "insideout_db";
 
 CREATE TABLE "journal" (
     id int primery key auto_increment,
-    column1 entry text
-    column2 emotion text
+    entry text
+     emotion text
 )
-INSERT INTO
+INSERT INTO journal (entry, emotion)
+VALUES ('Hoy me siento feliz', 'happy');
+
+INSERT INTO journal (entry, emotion)
+VALUES ('Hoy me siento triste', 'sad');
+
+INSERT INTO journal (entry, emotion)
+
+VALUES ('Hoy estoy enfadado', 'angry');
+
+INSERT INTO journal (entry, emotion)
+VALUES ('Hoy me siento ansioso', 'anxious');
+
+INSERT INTO journal (entry, emotion)
+VALUES ('Hoy me siento frustrado', 'frustrated');
+
+INSERT INTO journal (entry, emotion)
+VALUES ('Hoy me siento abrumado', 'overwhelmed');
+
+INSERT INTO journal (entry, emotion)
+VALUES ('Hoy estoy emocionado', 'excited');
+
+ INSERT INTO journal (entry, emotion)
+
+ VALUES ('Hoy me siento agradecido', 'grateful');
+
+ INSERT INTO journal (entry, emotion)
+ VALUES ('Hoy me siento tranquilo', 'calm');
+
+ INSERT INTO journal (entry, emotion)
+ VALUES ('Hoy me siento en paz', 'peaceful');
+
+ INSERT INTO journal (entry, emotion)
+ VALUES ('Hoy me siento alegre', 'joyful');
+
+ INSERT INTO journal (entry, emotion)
+ VALUES ('Hoy me siento contento', 'content');
+
+ INSERT INTO journal (entry, emotion)
+ VALUES ('Hoy me siento sereno', 'serene');
+
+ INSERT INTO journal (entry, emotion)
+ VALUES ('Hoy me siento esperanzado', 'hopeful');
+
+ INSERT INTO journal (entry, emotion)
+ VALUES ('Hoy me siento inspirado', 'inspired');
+ 
+
+
+
+
+
+
