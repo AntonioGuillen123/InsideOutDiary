@@ -16,7 +16,3 @@ class DatabaseSeeder extends Seeder
         Journal::Factory(1)->create();
     }
 }
-
-
-
-
