@@ -77,4 +77,21 @@ class JournalTest extends TestCase
             ->assertJsonCount(1)
             ->assertJsonFragment($newData);
     }
+
+    public function test_CheckIfCanFindAnEntryByIdOnJournalWithApi()
+    {
+        $this->post(route('apistore'), [
+            'entry' => 'Test Entry',
+            'emotion' => 'Test Emotion'
+        ]);
+
+        $data = [
+            'entry' => 'Test Entry'
+        ];
+
+        $response = $this->get(route('apishow', 1));
+        $response->assertStatus(200)
+            ->assertJsonCount(5)
+            ->assertJsonFragment($data);
+    }
 }
