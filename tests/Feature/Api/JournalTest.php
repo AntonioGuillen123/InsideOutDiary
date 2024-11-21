@@ -14,7 +14,7 @@ class JournalTest extends TestCase
 
     public function test_CheckIfRecieveAllEntryOfJournalInJsonFile()
     {
-        $journal = Journal::factory(2)->create();
+        Journal::factory(2)->create();
 
         $response = $this->get(route('apihome'));
 
