@@ -13,6 +13,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Journal::Factory(1)->create();
+        Journal::Factory()->create([
+            'entry' => 'Hoy estoy cansado',
+            'emotion' => 'img/emotions/sad.jpg'
+        ]);
+
+        Journal::Factory()->create([
+            'entry' => 'Hoy estoy feliz',
+            'emotion' => 'img/emotions/happy.jpg'
+        ]);
+
+        Journal::Factory()->create([
+            'entry' => 'Hoy estoy cabreado',
+            'emotion' => 'img/emotions/angry.jpg'
+        ]);
     }
 }

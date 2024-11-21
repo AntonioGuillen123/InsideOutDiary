@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS "insideout_db";
+
+CREATE DATABASE "insideout_db";
+
+USE "insideout_db";
+
+CREATE TABLE "journal" (
+    id int primery key auto_increment,
+    column1 entry text
+    column2 emotion text
+)
+INSERT INTO
