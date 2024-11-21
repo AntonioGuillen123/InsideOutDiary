@@ -1,3 +1,4 @@
 <header>
-    <h1>Esto es un texto</h1>
+    <img src="{{ asset('img/gitImages/logoWeb.jpeg') }}" alt="image logo">
+    <h1>Diario Emociones</h1>
 </header>

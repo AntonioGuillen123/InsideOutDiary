@@ -14,6 +14,7 @@ class JournalController extends Controller
     {
         $journals = Journal::all();
 
+
         return view('home', compact('journals'));
     }
 
