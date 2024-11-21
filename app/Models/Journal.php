@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use function Laravel\Prompts\table;
+
 class Journal extends Model
 {
    use HasFactory;
@@ -13,4 +15,9 @@ class Journal extends Model
         "entry",
         "emotion",
    ];
+   protected $table = "journal";
+
+
 }
+
+
