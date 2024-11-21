@@ -9,11 +9,16 @@
 </head>
 <body>
     <div class="app">
-        <x-header></x-header>
-        <main>
-            @yield('content')
-        </main>
-        <x-footer></x-footer>
+    <x-header></x-header>
+
+    <div class="container">
+    <x-aside></x-aside>
+    <div class="containerMain">
+    <main>
+         @yield('content')
+    </main>
+</div>
+    </div> 
     </div>
 </body>
 </html>
